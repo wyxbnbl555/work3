@@ -205,10 +205,17 @@ public class orderDaoImpl implements orderDao{
             st.setInt(3,order.getProductId());
             i = st.executeUpdate();
 
+<<<<<<< HEAD
 //            String sql2 = "DELETE FROM products WHERE p_id = ?";
 //            st.setInt(1,order.getProductId());
 //            st = conn.prepareStatement(sql2);
 //            i = st.executeUpdate();
+=======
+            String sql2 = "DELETE FROM products WHERE p_id = ?";
+            st = conn.prepareStatement(sql2);
+            st.setInt(1,order.getProductId());
+            i = st.executeUpdate();
+>>>>>>> 7985b87 (Initial commit)
 
             // 业务完毕，提交事务
             conn.commit();
