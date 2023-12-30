@@ -1,11 +1,10 @@
-package com.kuang.work3;
+package work3.jdbc;
 
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
 public class JdbcUtils {
-
     private static String driver = null;
     private static String url = null;
     private static String username = null;
@@ -14,7 +13,7 @@ public class JdbcUtils {
     static{
 
         try{
-            InputStream in = JdbcUtils.class.getClassLoader().getResourceAsStream("db.properties");
+            InputStream in = work3.jdbc.JdbcUtils.class.getClassLoader().getResourceAsStream("db.properties");
             Properties properties = new Properties();
             properties.load(in);
 

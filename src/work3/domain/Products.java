@@ -1,16 +1,24 @@
-package com.kuang.work3;
-
+package work3.domain;
 import java.io.Serializable;
 
-public class products implements Serializable {
+
+public class Products implements Serializable {
     private int productId;
     private String productName;
     private double productPrice;
+    private int productNum;
 
-    public products() {
+    public Products() {
     }
 
-    public products(int productId, String productName, double productPrice) {
+    public Products(int productId, String productName, double productPrice, int productNum) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productNum = productNum;
+    }
+
+    public Products(int productId, String productName, double productPrice) {
         this.productId = productId;
         this.productName = productName;
         this.productPrice = productPrice;
@@ -40,9 +48,26 @@ public class products implements Serializable {
         this.productPrice = productPrice;
     }
 
+    public int getProductNum() {
+        return productNum;
+    }
+
+    public void setProductNum(int productNum) {
+        this.productNum = productNum;
+    }
+
     @Override
     public String toString() {
-        return "products{" +
+        return "Products{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                ", productNum=" + productNum +
+                '}';
+    }
+
+    public String toString1() {
+        return "Products{" +
                 "productId=" + productId +
                 ", productName='" + productName + '\'' +
                 ", productPrice=" + productPrice +
